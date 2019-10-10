@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'nokogiri'
-require 'open-uri'
 
 def crypto_names
-    doc = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
-    puts page.xpath('//*[@id="id-bitcoin"]/td[3]')
+    page_url = "https://coinmarketcap.com/all/views/all/"
+    page = Nokogiri::HTML(open(page_url))
+    puts page
 end
