@@ -1,8 +1,8 @@
-require 'rubygems'
 require 'nokogiri'
+require 'pry'
+require 'open-uri'
 
 def crypto_names
-    page_url = "https://coinmarketcap.com/all/views/all/"
-    page = Nokogiri::HTML(open(page_url))
+    page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))   
     puts page
 end
